@@ -1,0 +1,49 @@
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
+            <h1 class="h2">Trips</h1>
+            
+            <div class="btn-toolbar mb-2 mb-md-0">
+            	<select id="trips-sample-routes">
+      				  <option value="0">Select a sample item</option> 
+      				</select>
+      				<input type="text" id="trips-routeid" placeholder="Or enter a route id here..." /> 
+              <div class="btn-group mr-2">
+                <button class="btn btn-sm btn-outline-secondary" onclick="ca.tripsGo();">Go</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="status-gathering-data" class='status-message '>
+              Gathering data, please wait.
+          </div>
+
+          <div id="status-select-message" class='status-message sm-gathering'>
+              Select item from samples list, or enter trip id. Then click Go.
+          </div>
+
+
+          <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>route_id</th>
+                  <th>service_id</th>
+                  <th>trip_id</th>
+                  <th>trip_headsign</th>
+                  <th>direction_id</th>
+                </tr>
+              </thead>
+              <tbody id="results">
+            </table>
+          </div>
+
+          <div class='status-message'>
+              To ensure performance, the output of this exercise is limited to 40 entries.
+          </div>
+
+          <script>
+          	$(document).ready(function() {
+          		ca.tripsInitialize();
+          	})
+          </script>
+

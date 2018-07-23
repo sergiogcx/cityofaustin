@@ -1,0 +1,41 @@
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
+            <h1 class="h2">Routes</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group mr-2">
+                <button class="btn btn-sm btn-outline-secondary" onclick="ca.routesInitialize();">REFRESH</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>route_id</th>
+                  <th>route_long_name</th>
+                  <th>route_type</th>
+                  <th>route_color</th>
+                </tr>
+              </thead>
+              <tbody id="results">
+              	<tr>
+                  <th>route_id</th>
+                  <th>route_long_name</th>
+                  <th>route_type</th>
+                  <th>route_color</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+		<script>
+			$(document).ready(function() {
+				ca.routesInitialize();	
+			});
+		</script>
+	
+
+
+
+
+

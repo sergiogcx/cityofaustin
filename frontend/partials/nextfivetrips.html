@@ -1,0 +1,54 @@
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
+            <h1 class="h2">Next Five Stops</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+            	<select id="nf-sample-stops">
+      				  <option value="0">Select a sample item</option> 
+      				</select>
+      				<input type="text" id="nf-stopid" placeholder="Or enter a stop id here..." /> 
+
+      				<input type="text" id="nf-time" placeholder="Time, format: hh:mm:ss" value="17:00:00" /> 
+              <div class="btn-group mr-2">
+                <button class="btn btn-sm btn-outline-secondary" onclick="ca.nfGo();">Go</button>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="status-gathering-data" class='status-message '>
+              Gathering data, please wait.
+          </div>
+
+          <div id="status-select-message" class='status-message sm-gathering'>
+              Select item from samples list, or enter trip id. Then click Go.
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>trip_id</th>
+                  <th>arrival_time</th>
+                  <th>departure_time</th>
+                  <th>drop_off_type</th>
+                  <th>pickup_type</th>
+                  <th>shape_dist_traveled</th>
+                  <th>stop_headsign</th>
+                  <th>stop_id</th>
+                  <th>stop_sequence</th>
+                  <th>timepoint</th>
+                </tr>
+              </thead>
+              <tbody id="results">
+              </tbody>
+            </table>
+          </div>
+
+          <div class='status-message'>
+              To ensure performance, the output of this exercise is limited to 5 entries.
+          </div>
+
+          <script>
+          	$(document).ready(function() {
+          		ca.nfInitialize();
+          	})
+          </script>

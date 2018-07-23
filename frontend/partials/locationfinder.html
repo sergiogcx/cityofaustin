@@ -1,0 +1,42 @@
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
+            <h1 class="h2">Location Finder</h1>
+          </div>
+
+          <div class="table-responsive">
+            <div class="btn-toolbar col-md-8" style='padding: 20px 0;'>
+    				<div class="col-md-8">Latitude (sample 30.3259534): <input type="text" id="lf-latitude" placeholder="Latitude" value="30.3259534"/> </div>
+    				<div class="col-md-8">Longitude (sample -97.7149763): <input type="text" id="lf-longitude" placeholder="Longitude" value="-97.7149763" /></div>
+    				<div class="col-md-8">Radius (in miles): <input type="text" id="lf-radius" placeholder="Radius in miles, default: 3" value="3" /></div>
+    				<div class="col-md-8">Limit (default: 40): <input type="text" id="lf-limit" placeholder="Limit, default: 40" value="40" /></div>
+    				<div class="col-md-8">Offset (default: 0): <input type="text" id="lf-offset" placeholder="Offset, default: 0" value="0" /></div>
+    				<div class="btn-group mr-2 col-md-8">
+    					<button class="btn btn-sm btn-outline-secondary" onclick="ca.lfGo();">Go</button>
+    				</div>
+            </div>
+
+          <div id="status-select-message" class='status-message'>
+              This location finder will locate the nearest stops given the coordinates and a radius, as well as all the routes that pass by.
+          </div>
+
+            <table class="table table-striped table-sm">
+              <thead>
+              	<tr>
+                  <th>route_id</th>
+                  <th>route_short_name</th>
+                  <th>stop_id</th>
+                  <th>stop_desc</th>
+                  <th>stop_lat</th>
+                  <th>stop_lon</th>
+                  <th>distance (mi)</th>
+                </tr>
+              </thead>
+              <tbody id="results">
+              </tbody>
+            </table>
+          </div>
+
+
+
+          <div class='status-message'>
+              To ensure performance, the output of this exercise is limited to 40 entries.
+          </div>
