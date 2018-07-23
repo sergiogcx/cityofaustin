@@ -47,7 +47,7 @@ Output:
     
     No additional parameters needed.
 	```
-- **Trips** This implements the functionality of the first challenge "List the available routes. You can fetch this data by querying routes.txt." 
+- **Trips** This implements the functionality of the second challenge "List the available routes. You can fetch this data by querying routes.txt." 
 	- URI:
 		-  [https://api.qudrio.com/v1/trips/{route_id}/{offset}](https://api.qudrio.com/trips)
 	- Use Example:
@@ -58,7 +58,7 @@ Output:
    The offset is directly the SQL query offset based on the imposed limit of 40 (ie SELECT ... LIMIT 40 OFFSET 0)
     ```
 
-- **Stops** This implements the functionality of the first challenge "List the stops for a specified trip. You can fetch this data by querying trips.txt and shapes.txt" 
+- **Stops** This implements the functionality of the third challenge "List the stops for a specified trip. You can fetch this data by querying trips.txt and shapes.txt" 
 	- URI:
 		-  [https://api.qudrio.com/v1/stops/{trip_id}/{offset}](https://api.qudrio.com/v1/stops)
 	- Use Example:
@@ -71,7 +71,7 @@ Output:
 
 ##### **EXTRA CREDIT**
 
-- **Route Find** This implements the functionality of the first challenge "List the routes that stop near a location. Specify the location using latitude and longitude. You can fetch this data by querying stops.txt, stop_times.txt, and trips.txt" 
+- **Route Find** This implements the functionality of the first extra-credit challenge "List the routes that stop near a location. Specify the location using latitude and longitude. You can fetch this data by querying stops.txt, stop_times.txt, and trips.txt" 
 	- URI:
 		-  [https://api.qudrio.com/v1/routes/find/{latitude}/{longitude}/{radius}/{limit}/{offset}](https://api.qudrio.com/v1/routes/find)
     - Use Example:
@@ -84,7 +84,7 @@ Output:
    
    The offset is directly the SQL query offset based on the imposed limit of 20 (ie SELECT ... LIMIT 20 OFFSET 0)
     ```
-- **Next Five Trips** This implements the functionality of the first challenge "List the next five trips arriving at a particular stop. Specify the stop_id and time. You can fetch this data by querying stops.txt, stop_times.txt, and trips.txt" 
+- **Next Five Trips** This implements the functionality of the second extra-credit challenge "List the next five trips arriving at a particular stop. Specify the stop_id and time. You can fetch this data by querying stops.txt, stop_times.txt, and trips.txt" 
 	- URI:
 		-  [https://api.qudrio.com/v1/routes/nextfive/{stop_id}/{time}](https://api.qudrio.com/v1/routes/nextfive)
     - Use Example:
